@@ -3,19 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Sticky Notes App</title>
+    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">`
     <link rel="stylesheet" href="styles/base.css"/>
     <link rel="stylesheet" href="styles/styles.css"/>
 
   </head>
   <body ng-controller="MainCtrl">
 
-
 <input type="text" ng-model="note.title">
 <input type="text" ng-model="note.content">
 <button ng-click="saveNote(note)">Add Note</button>
 
 
-
+<ul>
+  <li ng-repeat="note in notes">
+    <a href="#">
+      <h2>{{note.title}}</h2>
+      <p>{{note.content}}</p>
+    </a>
+  </li>
+</ul>
 
 
 
